@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Product</title>
+</head>
+<body>
+<a href="/products/create">Create new product</a>
+<h1>List Product</h1>
+<form method="post">
+    <input type="text" name="name" placeholder="nhap ten">
+    <input type="submit" value="search">
+</form>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Category</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="p:${p}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.address}"></td>
+        <td th:text="${p.category.name}"></td>
+        <td><a th:href="@{'/products/edit/'+${p.id}}">Edit</a></td>
+        <td><a th:href="@{'/products/delete/'+${p.id}}" onclick="return confirm('Are you sure to delete this product ?')" >Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>
