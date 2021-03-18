@@ -5,27 +5,27 @@
     <title>Create Product</title>
 </head>
 <body>
-<h1>Create Product</h1>
-<a href="/products">List Product</a>
-<form method="post" th:object="${p}">
-    <div>
-        <label>Name</label>
-        <input name="name" type="text" th:field="*{name}">
-    </div>
-    <div>
-        <label>Address</label>
-        <input name="address" type="text" th:field="*{address}">
-    </div>
+<!--<h1>Create Product</h1>-->
+<!--<a href="/products">List Product</a>-->
+<!--<form method="post" th:object="${p}">-->
+<!--    <div>-->
+<!--        <label>Name</label>-->
+<!--        <input name="name" type="text" th:field="*{name}">-->
+<!--    </div>-->
+<!--    <div>-->
+<!--        <label>Address</label>-->
+<!--        <input name="address" type="text" th:field="*{address}">-->
+<!--    </div>-->
 
-    <div>
-        <label>Category</label>
-        <select th:field="*{category}">
-            <th:block th:each="p:${listCategory}">
-                <option th:value="${p.id}" th:text="${p.name}"></option>
-            </th:block>
-        </select>
-    </div>
-    <input type="submit" value="Save">
-</form>
+<!--    <div>-->
+<!--        <label>Category</label>-->
+<!--        <select th:field="*{category}">-->
+<!--            <th:block th:each="p:${listCategory}">-->
+<!--                <option th:value="${p.id}" th:text="${p.name}"></option>-->
+<!--            </th:block>-->
+<!--        </select>-->
+<!--    </div>-->
+<!--    <input type="submit" value="Save">-->
+<!--</form>-->
 </body>
 </html>

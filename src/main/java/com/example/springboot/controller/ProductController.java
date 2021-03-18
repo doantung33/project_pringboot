@@ -26,6 +26,11 @@ public class ProductController {
         return categoryService.findAll();
     }
 
+    @GetMapping("/view/{id}")
+    public ModelAndView showView(@PathVariable long id){
+        return new ModelAndView("view","p",productService.findById(id));
+    }
+
     @GetMapping("")
     public ModelAndView list(){
         ModelAndView modelAndView= new ModelAndView("list","p",productService.findAll());

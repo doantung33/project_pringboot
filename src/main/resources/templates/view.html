@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymealeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<h2>View product</h2>
+<a href="/products">List products</a>
+<form method="post" th:object="${p}">
+    <div>
+        <label>Id</label>
+        <input name="id" th:field="*{id}">
+    </div>
+    <div>
+        <label>Name</label>
+        <input name="name" th:field="*{name}">
+    </div>
+    <div>
+        <label>Address</label>
+        <input name="address" th:field="*{address}">
+    </div>
+    <div>
+        <label>Address</label>
+        <input name="category" th:field="*{category.name}">
+    </div>
+</form>
+</body>
+</html>
